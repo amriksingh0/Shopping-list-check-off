@@ -4,7 +4,7 @@
     <title>Shopping List Check Off</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
-
+    <link rel="icon" href="https://img.icons8.com/dusk/64/000000/list.png" type="image/x-icon">
     <style>
       .emptyMessage {
         font-weight: bold;
@@ -24,16 +24,19 @@
       input{
         margin: 5px;
       }
+      button{
+        margin: 5px;
+      }
 
     </style>
   </head>
 <body>
   <div class="container">
-   <h1>Shopping List Check Off</h1>
-
+      <h1>Shopping List Check Off</h1>
    <div class="row">
 
-     <div ng-controller='ShoppingListAddController as itemAdder'>
+     <div class="col-md-6"
+          ng-controller='ShoppingListAddController as itemAdder'>
        <input type="text" ng-model="itemAdder.itemName" placeholder="item name">
        <input type="text" ng-model="itemAdder.itemQuantity" placeholder="quantity">
        <button ng-click="itemAdder.addItem();">Add Item To Shopping List</button>
